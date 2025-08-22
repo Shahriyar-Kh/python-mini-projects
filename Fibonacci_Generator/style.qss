@@ -1,0 +1,258 @@
+/* ======================== Enhanced Modern QSS Theme ======================== */
+
+/* ------------------------- Main Window & General ------------------------- */
+QMainWindow {
+    background-color: #2b2b2b;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    border: 1px solid #404040;  /* Subtle window border */
+}
+
+/* ------------------------- Animated Group Box ------------------------- */
+QGroupBox {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #3a3a3a;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding-top: 25px;
+    background-color: #363636;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);  /* Smooth transition */
+}
+
+QGroupBox:hover {
+    border-color: #4a4a4a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);  /* Depth effect */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 15px;
+    padding: 0 8px;
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #404040, stop:1 #363636
+    );
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* ------------------------- Enhanced Radio Buttons ------------------------- */
+QRadioButton {
+    color: #cccccc;
+    font-size: 16px;
+    spacing: 8px;
+    padding: 6px 0;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #5a5a5a;
+    border-radius: 9px;
+    background-color: #404040;
+    transition: all 0.2s ease;
+}
+
+QRadioButton::indicator:hover {
+    border-color: #6a6a6a;
+    transform: scale(1.1);  /* Hover scaling effect */
+}
+
+QRadioButton::indicator:checked {
+    background-color: #00a8e8;
+    border: 2px solid #0087c1;
+    box-shadow: 0 0 8px rgba(0, 168, 232, 0.4);  /* Glow effect */
+}
+
+/* ------------------------- Modern Input Fields ------------------------- */
+QLineEdit {
+    background-color: #404040;
+    color: #ffffff;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 16px;
+    selection-background-color: #00a8e8;
+    transition: all 0.3s ease;
+}
+
+QLineEdit:focus {
+    border: 2px solid #00a8e8;
+    background-color: #4a4a4a;
+    box-shadow: 0 0 12px rgba(0, 168, 232, 0.3);  /* Focus glow */
+}
+
+/* ------------------------- Advanced Button Effects ------------------------- */
+QPushButton {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00a8e8, stop:1 #0087c1
+    );
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 120px;
+    margin: 8px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00b8f8, stop:1 #0097d1
+    );
+    box-shadow: 0 4px 16px rgba(0, 168, 232, 0.35);  /* Enhanced shadow */
+    transform: translateY(-1px);  /* Lift effect */
+}
+
+QPushButton:pressed {
+    transform: translateY(1px);  /* Pressed animation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------- Custom Scrollbars ------------------------- */
+QScrollBar:vertical {
+    background: #363636;
+    width: 14px;
+    margin: 0;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background: #5a5a5a;
+    min-height: 30px;
+    border-radius: 7px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;
+    height: 0;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #6a6a6a;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* ------------------------- Modern Checkboxes ------------------------- */
+QCheckBox {
+    color: #cccccc;
+    spacing: 8px;
+    font-size: 16px;
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #5a5a5a;
+    border-radius: 4px;
+    background-color: #404040;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #00a8e8;
+    border-color: #0087c1;
+    image: url(:/icons/check.svg);  /* Add checkmark icon */
+}
+
+/* ------------------------- Progress Bar ------------------------- */
+QProgressBar {
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #363636;
+    text-align: center;
+    color: white;
+}
+
+QProgressBar::chunk {
+    background-color: #00a8e8;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+/* ------------------------- Tooltip Styling ------------------------- */
+QToolTip {
+    color: #ffffff;
+    background-color: #404040;
+    border: 1px solid #5a5a5a;
+    border-radius: 4px;
+    padding: 6px 10px;
+    opacity: 240;  /* Slightly transparent */
+    font-size: 14px;
+}
+
+/* ------------------------- Disabled State ------------------------- */
+QPushButton:disabled, QLineEdit:disabled, QRadioButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ------------------------- Menu Styling ------------------------- */
+QMenu {
+    background-color: #363636;
+    color: #ffffff;
+    border: 1px solid #4a4a4a;
+    padding: 6px;
+}
+
+QMenu::item:selected {
+    background-color: #00a8e8;
+    color: #ffffff;
+}
+
+/* ------------------------- Floating Action Button ------------------------- */
+QPushButton#floatingActionButton {
+    border-radius: 50%;
+    min-width: 56px;
+    min-height: 56px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+}
+
+/* ------------------------- Animated Progress ------------------------- */
+QProgressBar:indeterminate {
+    qproperty-minimum: 0;
+    qproperty-maximum: 0;
+    background-color: #363636;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+}
+
+QProgressBar:indeterminate::chunk {
+    background-color: #00a8e8;
+    width: 20px;
+    animation: progress-animation 1.5s infinite linear;
+}
+
+@keyframes progress-animation {
+    0% { margin-left: -40%; }
+    100% { margin-left: 140%; }
+}
+
+/* ------------------------- Custom Sliders ------------------------- */
+QSlider::groove:horizontal {
+    height: 8px;
+    background: #404040;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #00a8e8;
+    border: 2px solid #0087c1;
+    width: 20px;
+    height: 20px;
+    margin: -6px 0;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+QSlider::handle:horizontal:hover {
+    transform: scale(1.1);
+}
