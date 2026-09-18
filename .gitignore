@@ -1,0 +1,17 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*_Venv/
+*-venv/
+*venv*/
+*Eenv/
+virt/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
